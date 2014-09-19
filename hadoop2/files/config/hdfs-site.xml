@@ -65,14 +65,14 @@
      <value>4096</value>
   </property>
 
-{%- if hadoop.set_s3_key -%}
+{%- if hadoop.set_s3_key %}
   <property>
      <name>fs.s3n.awsAccessKeyId</name>
-     <value>hadoop.s3_key</value>
+     <value>{{ hadoop.s3_key }}</value>
   </property>
   <property>
      <name>fs.s3n.awsSecretAccessKey</name>
-     <value>hadoop.s3_secret</value>
+     <value>{{ hadoop.s3_secret }}</value>
   </property>
 {%- endif -%}
 </configuration>
